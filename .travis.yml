@@ -86,6 +86,6 @@ script:
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
           python3 stuff/php-format.py validate --all-files
 
-notifications:
-  slack:
-    secure: BGGaWyzHJ0Fb+oU93EjuZZ7e/2GK+dT1Ao3W5Ulbv8dQbzV761151T4Vby40hxIMim+MoXq+zL2GQ9i7tg6GnEMNVVBpHqL40S1Y5qZbZMPkcy0vq14t41uX5vJNIYVp24IvTxWKy3XA2+cq7irILTD2lMzv6xMveawhYdiqkwU=
+#notifications:
+#  slack:
+#    secure: BGGaWyzHJ0Fb+oU93EjuZZ7e/2GK+dT1Ao3W5Ulbv8dQbzV761151T4Vby40hxIMim+MoXq+zL2GQ9i7tg6GnEMNVVBpHqL40S1Y5qZbZMPkcy0vq14t41uX5vJNIYVp24IvTxWKy3XA2+cq7irILTD2lMzv6xMveawhYdiqkwU=
