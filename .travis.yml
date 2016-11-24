@@ -71,6 +71,9 @@ script:
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || (yarn install && yarn test)
   - |
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
+          phantomjs frontend/www/tests/phantomjs-testrunner.js http://localhost:8080/tests/index.html
+  - |
+      ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
           python stuff/i18n.py --validate
   - |
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
