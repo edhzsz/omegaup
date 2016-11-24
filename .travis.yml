@@ -61,6 +61,9 @@ before_script:
   - |
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
           (pear install pear/PHP_CodeSniffer-2.6.2 && phpenv rehash)
+  - |
+      ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
+          pushd frontend/www; python3 -m http.server 8080 &> /dev/null; popd
 
 script:
   - |
