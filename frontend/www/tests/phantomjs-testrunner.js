@@ -22,7 +22,6 @@ else {
         pages = [],
         page, address, resultsKey, i, l;
 
-
     var setupPageFn = function(p, k) {
         return function() {
             setupWriteFileFunction(p, k, fs.separator);

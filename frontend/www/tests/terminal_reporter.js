@@ -27,7 +27,6 @@
         }
     }
 
-
     /**
      * Basic reporter that outputs spec results to the terminal.
      * Use this reporter in your build pipeline.
@@ -195,7 +194,6 @@
                 suite._parent._failures += suite._failures + suite._nestedFailures;
                 suite._parent._skipped += suite._skipped + suite._nestedSkipped;
                 suite._parent._disabled += suite._disabled + suite._nestedDisabled;
-
             }
             currentSuite = suite._parent;
             if (self.verbosity < 3) {
