@@ -63,7 +63,7 @@ before_script:
           (pear install pear/PHP_CodeSniffer-2.6.2 && phpenv rehash)
   - |
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
-          pushd frontend/www; nohup python3 -m http.server 8080 >logfile.txt 2>&1 </dev/null &; popd
+          pushd frontend/www && (nohup python3 -m http.server 8085 >logfile.txt 2>&1 </dev/null &) && popd
 
 script:
   - |
@@ -74,7 +74,7 @@ script:
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || (yarn install && yarn test)
   - |
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
-          phantomjs frontend/www/tests/phantomjs-testrunner.js http://localhost:8080/tests/index.html
+          phantomjs frontend/www/tests/phantomjs-testrunner.js http://localhost:8085/tests/index.html
   - |
       ! [ $TRAVIS_PHP_VERSION != "hhvm" ] || \
           python stuff/i18n.py --validate
